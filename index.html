@@ -1,0 +1,673 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: #F7F1F0;
+        }
+        section
+        {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #161616;
+        }
+        section .circle
+        {
+            position: absolute;
+            top: 0;
+            color: #fff;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e51e2a;
+            clip-path: circle(80% at right -25%);
+        }
+        header
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a
+        {
+            text-decoration: none;
+            color: white;
+        border-radius: 40px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        }
+        header a:hover
+        {
+            transform: translateY(-8px);
+            transition: all 0.4s ease;
+        }
+        header .logo
+        {
+            position: relative;
+            max-width: 60px;
+        }
+        header .navigation
+        {
+           position: relative;
+           display: flex; 
+        } 
+        header .navigation li
+        {
+            list-style: none;
+        }
+        header .navigation li a
+        {
+            display: inline-block;
+            color: #fff;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 40px;
+        }
+        .content
+        {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content .textbox
+        {
+            position: relative;
+            max-width: 500px;
+            margin-right: 20px;
+
+        }
+        .content .textbox h2
+        {
+            color: #fff;
+            font-size: 3em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+        .content .textbox p
+        {
+            color: #fff;
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+        .content .textbox a
+    {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 8px 20px;
+        background-color: #e51e2a;
+        color: white;
+        border-radius: 40px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    .content  img
+    {
+        max-width: 500px;
+        max-height: 400px;
+        transform: rotate(-20px);
+    }
+    .service
+    {
+        position: relative;
+        width: 100%;
+        height: 550px;
+        background-color: #F7F1F0;
+    }
+    .service h2
+    {
+       
+            font-size: 3em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            font-weight: 700;
+            text-align: center;
+    }
+    .service h2:hover
+    {
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+    .swipper
+    {
+       
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+    }
+    .swipper .myservice
+    {
+        max-width: 400px;
+        height: 350px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        margin: 30px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .swipper .myservice:hover
+    {
+        transform: scaleX(1.09);
+        transition: all 0.3s ease;
+    }
+    .swipper .myservice img
+    {
+        margin-top: 10px;
+      width: 80px;
+      border-radius: 40%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+    .swipper .myservice h4
+    {
+        font-size: 25px;
+        font-weight: 600;
+        padding: 10px;
+        font-weight: 300;
+        letter-spacing: 1.5;
+        text-transform: capitalize;
+    }
+    .swipper .myservice p
+    {
+        letter-spacing: 1px;
+        line-height: 1.2;
+        padding: 10px;
+    }
+    .mycircle
+    {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 40px;
+        background-color: red;
+        clip-path: circle(30% at right -80%);
+    }
+    .project
+    {
+        position: relative;
+       width: 100%;
+       height: 400px;
+       background-color: #F7F1F0;
+    }
+    .project h2
+    {
+        font-size: 3em;
+        text-align: center;
+        padding: 30px;
+        font-weight: 700;
+
+    }
+    .mytable
+    {
+        width: 90%;margin: 0 5%;
+
+    }
+    table
+    {
+        width: 100%;
+        text-align: center;
+       border: 2px solid green;
+       border-radius: 5px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+       border-collapse: collapse;
+       border-left: 10px solid green;
+       border-right: 10px solid green;
+    }
+    table th
+    {
+       
+        font-size: 20px;
+        margin: 10px;
+        border-bottom: 1px solid green;
+      
+    }
+
+td,input[type="checkbox"]
+{
+    font-size: 18px;
+    padding: 5px;
+}
+table tr td img
+{
+    width: 25px;
+}
+table tr td:first-child::after
+{
+    content: '✓';
+}
+.why
+{
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background-color: #F7F1F0;
+    text-align: center;
+}
+
+.why h2
+    {
+       
+            font-size: 3em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            font-weight: 700;
+            text-align: center;
+    }
+    .why h2:hover
+    {
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+    .reason
+    {
+       
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+    }
+    .reason .reasonone
+    {
+        max-width: 400px;
+        height: 350px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        margin: 30px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .reason .reasonone:hover
+    {
+        transform: scaleX(1.09);
+        transition: all 0.3s ease;
+    }
+    .reason .reasonone img
+    {
+        margin-top: 10px;
+      width: 80px;
+      border-radius: 40%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+    .reason .reasonone h4
+    {
+        font-size: 25px;
+        font-weight: 600;
+        padding: 10px;
+        font-weight: 300;
+        letter-spacing: 1.5;
+        text-transform: capitalize;
+    }
+    .reason .reasonone p
+    {
+        letter-spacing: 1px;
+        line-height: 1.2;
+        padding: 10px;
+    }
+    .mycircle
+    {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 40px;
+        background-color: red;
+        clip-path: circle(30% at right -80%);
+    }
+    .why img
+    {
+      width: 200px;
+      height: 70px;
+    }
+
+
+
+
+
+      .swiper {
+        position: relative;
+        width: 70%;
+        height: 450px;
+      }
+      .swiper h2
+      {
+        text-align: center;
+        font-family: 'poppins';
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .swiper-slide img {
+        width: 200px;
+        height: 200px;
+        margin:0 auto;
+        border-radius: 50%;
+        justify-content: center;
+        object-position: center;
+      }
+      .swiper-slide .mytext
+      {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        height: 150px;
+      }
+      .swiper-slide .mytext i h5
+      {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: 'Poppins';
+      }
+      
+/* footer section */
+/*********** Start Footer *********/
+.footer{ width:100%; background:#000; float:left; padding:20px 0px; margin-top:50px;}
+.footer-parts{ width:350px; float:left; padding:0px 25px;}
+.footer-parts-h4{ color:#FFF; padding:10px 0px; font-size:18px;}
+.footer-parts-p{ color:#FFF; font-size:14px; padding:5px 0px; line-height:26px; text-align:justify;}
+.footer-parts ul{ list-style:none; padding:0px 0px 0px 100px;}
+.footer-parts ul li{color: #fff; padding:0px; text-transform:none; margin-top:-10px; margin-bottom:20px;}
+.footer-parts ul li a{ color:#FFF; padding:6px 0px; text-decoration:none; font-size: 16px;}
+.footer-parts ul li a:hover{ color:#BBB;}
+.form{ width:240px; border-radius:2px; padding:8px 10px; color:#000; font-size:16px; margin:10px auto; border:none; }
+.subscribe{ padding:8px 15px; background:#ffd200; border-radius:2px; cursor:pointer; color:#000;
+font-size:16px; margin-left:-6px; border:none;}
+.subscribe:hover{background:#F0B604;}
+
+.social-links{ list-style:none; margin:10px 0px;}
+.social-links ul{ list-style:none; padding:0px 0px 0px 0px;}
+.social-links ul li{ padding:40px 10px 10px; text-transform:none; float:left; margin-top:-10px; margin-bottom:20px;}
+.social-links ul li a{ color:#FFF; padding:10px 15px 6px 0px; font-size:20px; text-decoration:none;}
+.social-links ul li a:hover{ color:#BBB;}
+
+.footer-bottom{ width:100%; background:#000; float:left; color:#FFF; text-align:center; font-size:12px; 
+font-weight:bold; padding:15px 0px !important;}
+/*********** End Footer *********/
+
+    </style>
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+        <header>
+            <a href="#"> <h1 class="logo">HEAVY</h1></a>
+                <ul  class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </header>
+        <div class="content">
+           
+            <div class="textbox">
+                <h2>About Heavy</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                     Cupiditate modi corporis eius possimus facere velit error voluptatum quam nobis
+                      dignissimos ducimus sit itaque veniam, officiis voluptas. Asperiores porro eligendi 
+                      fugiat. </p> <a href="#">learn More</a> 
+            </div>
+            <img src="photo_2022-08-31_21-19-03-removebg-preview.png"">
+        </div>
+  </section>
+  <div class="service">
+    <h2>Our Services</h2>
+    <div class="swipper">
+       
+        <div class="myservice">
+            <div class="mycircle"></div>
+            <img src="icons8-website-50.png" alt="">
+            <h4>web Development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam debitis. Labore quo deleniti minima corporis tempore totam laudantium eveniet, amet, quos ullam accusamus exercitationem dolores officia? Eligendi, recusandae sed.</p>
+        </div>
+        <div class="myservice">
+            <div class="mycircle"></div>
+            <img src="icons8-android-50.png" alt="">
+            <h4>App Development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam debitis. Labore quo deleniti minima corporis tempore totam laudantium eveniet, amet, quos ullam accusamus exercitationem dolores officia? Eligendi, recusandae sed.</p>
+        </div>
+        <div class="myservice">
+            <div class="mycircle"></div>
+            <img src="icons8-adobe-photoshop-30.png" alt="">
+            <h4>Photo Editing</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam debitis. Labore quo deleniti minima corporis tempore totam laudantium eveniet, amet, quos ullam accusamus exercitationem dolores officia? Eligendi, recusandae sed.</p>
+        </div>
+        
+    </div>
+  </div>
+  <div class="project">
+    <h2>My Projects</h2>
+   <div class="mytable">
+<table>
+    <tr>
+      <th>Project Name</th>
+      <th>Html</th>
+      <th>css</th>
+      <th>Javascript</th>
+      <th>Java</th>
+      <th>PHp</th>
+      <th>Android</th>
+      <th>MySql</th>
+    </tr>
+    <tr>
+    <td>  <img src="icons8-broker-64.png" alt="">Online Brokerage</td>
+      <td><input type="checkbox" checked></td>
+      <td><input type="checkbox" checked></td>
+      <td><input type="checkbox" checked></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox" checked></td>
+      <td><input type="checkbox"></td>
+      <td><input type="checkbox" checked></td>
+    </tr>
+    <tr>
+        <td> <img src="icons8-drop-of-blood-48.png" alt=""> Donate Blood</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox"checked></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" checked></td>
+    </tr>
+    <tr>
+        <td><img src="icons8-calculator-50.png" alt=""> Calculator </td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" ></td>
+    </tr>
+    <tr>
+        <td><img src="icons8-wedding-travel-50.png" alt=""> Tour and Travel </td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" checked></td>
+    </tr>
+    <tr>
+        <td><img src="icons8-bank-48.png" alt=""> Bank System </td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" checked></td>
+    </tr>
+    <tr>
+        <td><img src="icons8-supermarket-64.png" alt=""> SuperMarket System </td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox" checked></td>
+        <td><input type="checkbox" ></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox" checked></td>
+    </tr>
+    
+  </table>
+</div>
+  </div>
+  <div class="why">
+    <h2>Why With Me</h2>
+    <img src="icons8-pulse-50.png" alt="">
+    <div class="reason">
+       
+        <div class="reasonone">
+            <div class="mycircle"></div>
+            <img src="icons8-money-bag-50.png">
+            <h4>Best Price</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam debitis. Labore quo deleniti minima corporis tempore totam laudantium eveniet, amet, quos ullam accusamus exercitationem dolores officia? Eligendi, recusandae sed.</p>
+        </div>
+        <div class="reasonone">
+            <div class="mycircle"></div>
+            <img src="icons8-helping-hand-50.png" alt="">
+            <h4>Reliablity</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam debitis. Labore quo deleniti minima corporis tempore totam laudantium eveniet, amet, quos ullam accusamus exercitationem dolores officia? Eligendi, recusandae sed.</p>
+        </div>
+        <div class="reasonone">
+            <div class="mycircle"></div>
+            <img src="icons8-time-50.png" alt="">
+            <h4>On Time </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quisquam debitis. Labore quo deleniti minima corporis tempore totam laudantium eveniet, amet, quos ullam accusamus exercitationem dolores officia? Eligendi, recusandae sed.</p>
+        </div>
+        
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <h2>What Customer say's About Me</h2>
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">
+        <img src="abrish.jpg" alt="">
+        <div class="mytext">
+           <i><h5>Abereham Zeleke</h5></i>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsa a magnam animi dolores deserunt, aliquam labore impedit aperiam voluptatum omnis rerum distinctio debitis autem ea adipisci earum harum illum.</p>
+        </div>
+      </div>
+      <div class="swiper-slide"> <img src="abeni.jpg" alt="">
+        <div class="mytext">
+           <i><h5>Abenezer Tessema</h5></i>
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora fugit! Eaque suscipit quos numquam at voluptatem qui praesentium sapiente rem consequuntur quis tenetur minima doloribus, ad in incidunt impedit.</p>
+        </div></div>
+      <div class="swiper-slide"> <img src="tibe.jpg" alt="">
+        <div class="mytext">
+           <i><h5>Tibebe feleke</h5></i>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi illo facilis, quas tempore debitis ab maxime numquam molestias. Veniam placeat enim id labore rerum voluptatum porro, itaque eveniet quos unde?</p>
+        </div></div>
+      <div class="swiper-slide"> <img src="roba.jpg" alt="">
+        <div class="mytext">
+           <i><h5>Roba Gelana</h5></i>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, corporis fugiat temporibus alias omnis odio aut. Nulla quisquam non itaque, repudiandae eveniet sit exercitationem soluta similique earum, perferendis molestias hic.</p>
+        </div></div>
+       
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    });
+  </script>
+  <!------- Start Footer --------->
+<div class="footer">
+	<div class="footer-parts">
+    	<div class="footer-parts-h4">About Company</div>
+        <div class="footer-parts-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+        took a galley of type and scrambled it to make a type specimen book.</div>
+    </div>
+    <div class="footer-parts">
+    	<div style="padding-left:100px;">
+        	<div class="footer-parts-h4">Our Liks</div>
+        </div>
+        <ul>
+        	<li>PhoneNumber:<a href="#!">+251964945647</a></li>
+            <li>Email:<a href="#">surafelwondu47@gmail.com</a></li>
+            <li>Facebook:<a href="#!">sura hevi</a></li>
+            <li>Instagram:<a href="#!">hevi590</a></li>
+           
+        </ul>
+    </div>
+    <div class="footer-parts">
+    	<div class="footer-parts-h4">Subscribe &amp; Social Links</div>
+        <form action="" method="post">
+        	<input type="text" class="form" placeholder="example@mail.com">
+            <button type="submit" name="submit" class="subscribe">Subscribe</button>
+        </form>
+        
+        <div class="social-links">
+        	<ul>
+            	<li><a href="#!"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#!"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#!"><i class="fa-brands fa-google-plus"></i></a></li>
+                <li><a href="#!"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!------- End Footer --------->
+</body>
+</html>
